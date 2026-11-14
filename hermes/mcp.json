@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "llms-ink": {
+      "type": "streamable-http",
+      "url": "https://llms.ink/mcp"
+    }
+  }
+}

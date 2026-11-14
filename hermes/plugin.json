@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "llms-ink",
+  "version": "0.2.0",
+  "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt; build cited context packs, read your dependencies' docs, take video notes and fix llms.txt files.",
+  "author": {
+    "name": "Lucas Espindola",
+    "url": "https://lucasespindola.com"
+  },
+  "homepage": "https://llms.ink/workflows/",
+  "repository": "https://github.com/lukax/llms-ink-skills",
+  "license": "MIT",
+  "keywords": [
+    "llms.txt",
+    "documentation",
+    "context",
+    "markdown",
+    "mcp",
+    "dependencies",
+    "video"
+  ]
+}
