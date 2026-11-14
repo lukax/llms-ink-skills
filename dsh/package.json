@@ -1,0 +1,27 @@
+{
+  "name": "dsh-llms-ink",
+  "version": "0.2.0",
+  "description": "llms.ink MCP tools for DeepSeek Harness: read public sites, docs, GitHub repos, PDFs and videos as llms.txt.",
+  "author": "Lucas Espindola (https://lucasespindola.com)",
+  "homepage": "https://llms.ink/workflows/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukax/llms-ink-skills.git",
+    "directory": "dsh"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "llms.txt",
+    "mcp"
+  ],
+  "files": [
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

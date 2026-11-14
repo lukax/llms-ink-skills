@@ -1,0 +1,25 @@
+{
+  "name": "llms-ink",
+  "owner": {
+    "name": "Lucas Espindola",
+    "url": "https://lucasespindola.com"
+  },
+  "metadata": {
+    "description": "llms.ink skills and MCP server for reading public links as llms.txt."
+  },
+  "plugins": [
+    {
+      "name": "llms-ink",
+      "source": "./hermes",
+      "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt; build cited context packs, read your dependencies' docs, take video notes and fix llms.txt files.",
+      "version": "0.2.0",
+      "category": "development",
+      "tags": [
+        "llms.txt",
+        "documentation",
+        "context",
+        "mcp"
+      ]
+    }
+  ]
+}

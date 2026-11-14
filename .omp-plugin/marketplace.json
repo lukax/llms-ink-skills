@@ -1,0 +1,14 @@
+{
+  "name": "llms-ink",
+  "owner": { "name": "Lucas Espindola", "url": "https://lucasespindola.com" },
+  "metadata": { "description": "llms.ink tools and skills for omp: read public links as llms.txt." },
+  "plugins": [
+    {
+      "name": "llms-ink",
+      "source": "./",
+      "description": "The ink_llms and ink_check tools, six skills and an /ink command for reading public sites, docs, GitHub repos, PDFs and videos as llms.txt.",
+      "category": "development",
+      "tags": ["llms.txt", "documentation", "context"]
+    }
+  ]
+}

@@ -64,6 +64,28 @@ hermes mcp add llms-ink --url https://llms.ink/mcp
 
 For a local stdio server instead, use `command: uvx` with `args: [--from, llms-ink, llms-ink-mcp]` (the [Python package](https://pypi.org/project/llms-ink/); it reads `LLMS_INK_KEY` from `env:`).
 
+omp: the `ink_llms` and `ink_check` tools, the six skills and `/llms-ink:ink`.
+
+```sh
+omp plugin marketplace add lukax/llms-ink-skills
+omp plugin install llms-ink@llms-ink
+```
+
+The tools send `LLMS_INK_KEY` when it's set. The omp plugin leaves out the MCP server so the same tools don't appear twice; for video frames, clip links and drafts, add `https://llms.ink/mcp` with `/mcp add`.
+
+GitHub Copilot CLI: the six skills and the MCP server, from the Agent Plugins package in `hermes/`.
+
+```sh
+copilot plugin marketplace add lukax/llms-ink-skills
+copilot plugin install llms-ink@llms-ink
+```
+
+DeepSeek Harness: the MCP server as a profile bundle (needs `pnpm` and `git`); its tools appear as `mcp__llms-ink__<tool>`. For the skills, run `npx skills add lukax/llms-ink-skills`.
+
+```sh
+dsh plugin --profile web add "github:lukax/llms-ink-skills#path:/dsh"
+```
+
 No install: add this line to your CLAUDE.md or AGENTS.md.
 
 ```
