@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "llms-ink": { "type": "http", "url": "https://llms.ink/mcp" }
+  }
+}

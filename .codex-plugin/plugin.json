@@ -1,0 +1,28 @@
+{
+  "name": "llms-ink",
+  "version": "0.2.0",
+  "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt; build cited context packs, read your dependencies' docs, take video notes and fix llms.txt files.",
+  "author": { "name": "Lucas Espindola", "url": "https://lucasespindola.com" },
+  "homepage": "https://llms.ink/workflows/",
+  "repository": "https://github.com/lukax/llms-ink-skills",
+  "license": "MIT",
+  "keywords": ["llms.txt", "documentation", "context", "markdown", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "llms.ink",
+    "shortDescription": "Read any public link as text",
+    "longDescription": "Turn public websites, docs sections, GitHub repositories, PDFs and videos into llms.txt and llms-full.txt. Skills read a source with citations, build and refresh context packs, collect your dependencies' docs, write timestamped video notes, and check or write a site's llms.txt. Public sources only; anonymous use has shared daily limits, and an optional LLMS_INK_KEY gives you your own quota.",
+    "developerName": "Lucas Espindola",
+    "category": "Developer Tools",
+    "capabilities": ["Read"],
+    "websiteURL": "https://llms.ink/workflows/",
+    "defaultPrompt": [
+      "Use llms.ink to read this repo and explain how to set it up.",
+      "Collect the docs for my project's dependencies into a context pack.",
+      "Turn this video into chaptered notes with timestamps."
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

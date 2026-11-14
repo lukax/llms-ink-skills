@@ -1,0 +1,9 @@
+{
+  "name": "llms-ink",
+  "version": "0.2.0",
+  "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt through llms.ink.",
+  "mcpServers": {
+    "llms-ink": { "httpUrl": "https://llms.ink/mcp" }
+  },
+  "contextFileName": "GEMINI.md"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "llms-ink",
+  "description": "llms.ink skills, /ink command and MCP server for reading public links as llms.txt.",
+  "owner": { "name": "Lucas Espindola", "url": "https://lucasespindola.com" },
+  "plugins": [
+    {
+      "name": "llms-ink",
+      "source": "./",
+      "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt, with six skills and an /ink command.",
+      "category": "development",
+      "tags": ["llms.txt", "documentation", "context", "mcp"]
+    }
+  ]
+}

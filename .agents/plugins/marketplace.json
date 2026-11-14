@@ -1,0 +1,12 @@
+{
+  "name": "llms-ink",
+  "interface": { "displayName": "llms.ink" },
+  "plugins": [
+    {
+      "name": "llms-ink",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Developer Tools"
+    }
+  ]
+}
