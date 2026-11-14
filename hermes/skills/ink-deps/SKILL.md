@@ -5,6 +5,14 @@ description: Find the documentation of a project's direct dependencies from pack
 
 Find the project's dependency manifests: `package.json`, `pyproject.toml`, `requirements*.txt`, `Cargo.toml` or `go.mod`, at the project root unless the user names a workspace member. If the project installs from a private registry (an `.npmrc` registry, a pip `--index-url`, a Cargo `registry =` entry), ask before looking anything up: dependency names are sent to the public registries.
 
+When the user wants docs that match the installed versions kept in the repo (for example `.context/` referenced from AGENTS.md, refreshed in CI), use the llms.ink CLI instead of the steps below:
+
+```sh
+npx -y @lukax/llms-ink context --max 5
+```
+
+It reads each manifest's lockfile (`package-lock.json`, `pnpm-lock.yaml`, `yarn.lock`, `uv.lock`, `poetry.lock`, `requirements*.txt` pins, `Cargo.lock`, `go.mod`), reads docs for that exact version (docs.rs, pkg.go.dev, versioned docs, or the GitHub repo at the release tag; otherwise the latest docs, marked `unpinned`), keeps the sections that mention what the code imports, and writes `.context/<package>@<version>.md`, `.context/README.md` and a marked block in AGENTS.md. Pass `--manifest` for workspace members, `--agents-md none` to leave AGENTS.md alone, `--out` for another folder. Show the user the files written and the "Not included" list in `.context/README.md`, and point out unpinned packages. Each package read counts as one llms.ink link.
+
 List documentation sources with the bundled helper `scripts/ink.mjs`, choosing a new output path:
 
 ```sh
