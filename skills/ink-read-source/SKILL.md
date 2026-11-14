@@ -16,7 +16,7 @@ metadata:
 
 Use the supplied public URL. Read the llms.txt index before expanding an entire site or repository. With the llms.ink MCP connection, call `llms_txt` with `{ "url": "..." }`; call `llms_full_txt` on the relevant source when full content is needed. Discover the client's actual qualified tool name rather than guessing its prefix.
 
-If MCP is unavailable, run the bundled dependency-free Node 22+ helper:
+If MCP is unavailable, run the bundled dependency-free Node 22+ helper `scripts/ink.mjs`:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs read --url 'https://llmstxt.org' --mode llms

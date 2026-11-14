@@ -16,7 +16,7 @@ metadata:
 
 Find the project's dependency manifests: `package.json`, `pyproject.toml`, `requirements*.txt`, `Cargo.toml` or `go.mod`, at the project root unless the user names a workspace member. If the project installs from a private registry (an `.npmrc` registry, a pip `--index-url`, a Cargo `registry =` entry), ask before looking anything up: dependency names are sent to the public registries.
 
-List documentation sources with the bundled helper, choosing a new output path:
+List documentation sources with the bundled helper `scripts/ink.mjs`, choosing a new output path:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs deps --manifest package.json --out deps.json

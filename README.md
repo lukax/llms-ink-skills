@@ -36,6 +36,26 @@ OpenClaw (ClawHub), one command per skill:
 clawhub install ink-read-source
 ```
 
+Hermes Agent: add the tap, install the skills you want, and connect the MCP server.
+
+```sh
+hermes skills tap add lukax/llms-ink-skills
+hermes skills install lukax/llms-ink-skills/ink-read-source
+hermes mcp add llms-ink --url https://llms.ink/mcp
+```
+
+`hermes mcp add` asks whether the server needs authentication: answer no, or yes and paste your `lk_…` key (Hermes keeps it in `~/.hermes/.env` and sends it as `Authorization: Bearer`). The same server in `~/.hermes/config.yaml`:
+
+```yaml
+mcp_servers:
+  llms-ink:
+    url: https://llms.ink/mcp
+    headers:
+      Authorization: Bearer ${LLMS_INK_KEY}  # only with LLMS_INK_KEY set in ~/.hermes/.env
+```
+
+Leave `headers` out without a key: Hermes sends an unset `${LLMS_INK_KEY}` literally, and llms.ink answers 401. For a local stdio server instead, use `command: uvx` with `args: [--from, llms-ink, llms-ink-mcp]` (needs [uv](https://docs.astral.sh/uv/); it reads `LLMS_INK_KEY` from `env:`).
+
 No install: add this line to your CLAUDE.md or AGENTS.md.
 
 ```

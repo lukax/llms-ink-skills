@@ -16,7 +16,7 @@ metadata:
 
 Get the video's full-mode text, which includes the timestamped transcript. With the llms.ink MCP connection, call `llms_full_txt` with `{ "url": "..." }`; `llms_txt` returns the index with the video's own chapters, if it has any. Discover the client's actual qualified tool names rather than guessing a prefix.
 
-If MCP is unavailable, run the bundled helper:
+If MCP is unavailable, run the bundled helper `scripts/ink.mjs`:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs read --url 'https://www.youtube.com/watch?v=VIDEO_ID' --mode full

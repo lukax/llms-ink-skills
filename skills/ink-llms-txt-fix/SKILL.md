@@ -21,7 +21,7 @@ Check what is published now. With the llms.ink MCP connection, call `check_llms_
 Get a draft:
 
 - If the site already publishes an llms.txt, start from that file in the repository (or from the checked URL) and fix the reported issues: one H1 title, a `>` blockquote summary, H2 sections of `- [name](url): notes` links, absolute URLs, served as `text/plain` or `text/markdown`, and no broken links.
-- If there is none, generate one with the MCP `llms_txt` tool, the bundled helper, or by fetching `https://llms.ink/<url>`:
+- If there is none, generate one with the MCP `llms_txt` tool, the bundled helper `scripts/ink.mjs`, or by fetching `https://llms.ink/<url>`:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs read --url 'https://example.com' --mode llms

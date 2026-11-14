@@ -16,7 +16,7 @@ metadata:
 
 Identify the task the context should support and the public source URLs. Prefer the relevant documentation section to a broad site root. Keep the user's destination and content requirements; otherwise choose a new descriptive local filename.
 
-Use the bundled Node 22+ helper to fetch sources and preserve a refreshable snapshot:
+Use the bundled Node 22+ helper `scripts/ink.mjs` to fetch sources and preserve a refreshable snapshot:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs pack --url 'https://llmstxt.org' --url 'https://docs.astro.build/en/getting-started/' --out context-pack.json --markdown context-pack.md

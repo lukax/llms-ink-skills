@@ -16,7 +16,7 @@ metadata:
 
 Locate the context-pack JSON the user wants refreshed. It must be a version 1 pack with its original source URLs, text and output modes. If there is no prior snapshot, use `ink-build-context` and state that a historical comparison is unavailable.
 
-Run the bundled Node 22+ helper, choosing new output paths:
+Run the bundled Node 22+ helper `scripts/ink.mjs`, choosing new output paths:
 
 ```sh
 node <skill-directory>/scripts/ink.mjs refresh --input context-pack.json --out context-pack-next.json --markdown context-changes.md
