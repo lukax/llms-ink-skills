@@ -1,6 +1,6 @@
-# llms.ink skills · 0.2.0
+# llms.ink skills · 0.4.0
 
-Read public sites, docs, GitHub repos, PDFs and videos as llms.txt from your agent. Six skills, an `/ink` command for Claude Code, and the remote MCP server `https://llms.ink/mcp`.
+Read public sites, docs, GitHub repos, PDFs and videos as llms.txt from your agent. Seven skills, an `/ink` command for Claude Code, and the remote MCP server `https://llms.ink/mcp`.
 
 ## Install
 
@@ -36,7 +36,7 @@ OpenClaw (ClawHub), one command per skill:
 clawhub install ink-read-source
 ```
 
-Hermes Agent: the six skills (as `llms-ink:<skill>`) and the MCP server in one plugin.
+Hermes Agent: the seven skills (as `llms-ink:<skill>`) and the MCP server in one plugin.
 
 ```sh
 hermes plugins install lukax/llms-ink-skills/hermes --enable
@@ -64,7 +64,7 @@ hermes mcp add llms-ink --url https://llms.ink/mcp
 
 For a local stdio server instead, use `command: uvx` with `args: [--from, llms-ink, llms-ink-mcp]` (the [Python package](https://pypi.org/project/llms-ink/); it reads `LLMS_INK_KEY` from `env:`).
 
-omp: the `ink_llms` and `ink_check` tools, the six skills and `/llms-ink:ink`.
+omp: the `ink_llms` and `ink_check` tools, the seven skills and `/llms-ink:ink`.
 
 ```sh
 omp plugin marketplace add lukax/llms-ink-skills
@@ -73,7 +73,7 @@ omp plugin install llms-ink@llms-ink
 
 The tools send `LLMS_INK_KEY` when it's set. The omp plugin leaves out the MCP server so the same tools don't appear twice; for video frames, clip links and drafts, add `https://llms.ink/mcp` with `/mcp add`.
 
-GitHub Copilot CLI: the six skills and the MCP server, from the Agent Plugins package in `hermes/`.
+GitHub Copilot CLI: the seven skills and the MCP server, from the Agent Plugins package in `hermes/`.
 
 ```sh
 copilot plugin marketplace add lukax/llms-ink-skills
@@ -101,6 +101,7 @@ To read a public web page, docs site, GitHub repo, PDF or video, fetch https://l
 | `ink-refresh-docs` | Refresh a saved pack and see what changed. |
 | `ink-deps` | Collect the docs for your project's dependencies. |
 | `ink-video-notes` | Turn a video into chaptered notes with timestamps. |
+| `ink-listen-live` | Follow a live stream and act when it mentions something. |
 | `ink-llms-txt-fix` | Check your site's llms.txt and write a fixed one. |
 
 In Claude Code, run `/llms-ink:ink <url>` for the index or `/llms-ink:ink <url> full` for the content. Skills use the MCP server when it's connected, the bundled Node 22+ helper otherwise, and plain `https://llms.ink/<url>` fetches when neither is available.

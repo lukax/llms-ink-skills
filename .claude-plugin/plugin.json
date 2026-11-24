@@ -1,7 +1,7 @@
 {
   "name": "llms-ink",
   "displayName": "llms.ink",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt; build cited context packs, read your dependencies' docs, take video notes and fix llms.txt files.",
   "author": { "name": "Lucas Espindola", "url": "https://lucasespindola.com" },
   "homepage": "https://llms.ink/workflows/",

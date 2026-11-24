@@ -22,9 +22,9 @@ Run the bundled Node 22+ helper `scripts/ink.mjs`, choosing new output paths:
 node <skill-directory>/scripts/ink.mjs refresh --input context-pack.json --out context-pack-next.json --markdown context-changes.md
 ```
 
-The helper sends each public URL to llms.ink with `fresh=1`, bypasses the cache, and consumes the normal new-link quota. It preserves per-source output mode and the original snapshot. Requests are sequential with no automatic retries; a failed refresh does not replace previous evidence. It refuses to overwrite output files. No key is needed; an optional `LLMS_INK_KEY` is sent as a Bearer token, and an invalid key fails with HTTP 401 without a retry.
+The helper sends each public URL to llms.ink with `fresh=true`, bypasses the cache, and consumes the normal new-link quota. It preserves per-source output mode and the original snapshot. Requests are sequential with no automatic retries; a failed refresh does not replace previous evidence. It refuses to overwrite output files. No key is needed; an optional `LLMS_INK_KEY` is sent as a Bearer token, and an invalid key fails with HTTP 401 without a retry.
 
-Without Node, request `https://llms.ink/api/v0/llms?url=<url-encoded source>&mode=<mode>&fresh=1` for each source in the pack (JSON with a `text` field), keep the old pack untouched, and compare the old and new text by heading yourself.
+Without Node, request `https://llms.ink/api/v0/llms?url=<url-encoded source>&mode=<mode>&fresh=true` for each source in the pack (JSON with a `text` field), keep the old pack untouched, and compare the old and new text by heading yourself.
 
 Read the change report and compare relevant passages in the old and new JSON before explaining implications. Heading-based comparison identifies added, removed and updated sections; it does not prove when a publisher changed something. Generated indexes or extraction differences may change without the underlying source changing. Distinguish those possibilities and cite the affected URLs.
 

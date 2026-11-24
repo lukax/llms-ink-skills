@@ -38,7 +38,7 @@ export async function readSource(input, { mode = 'llms', fresh = false, fetcher 
   const headers = { Accept: 'application/json', ...authHeaders(key) };
   const endpoint = new URL(ENDPOINT);
   endpoint.searchParams.set('url', requestedUrl); endpoint.searchParams.set('mode', mode);
-  if (fresh) endpoint.searchParams.set('fresh', '1');
+  if (fresh) endpoint.searchParams.set('fresh', 'true');
   const response = await fetcher(endpoint, { headers, signal: AbortSignal.timeout(120_000) });
   const body = await readCapped(response, MAX_BYTES, 'Response exceeds the 12 MB workflow limit; choose a narrower source.');
   let result = null;

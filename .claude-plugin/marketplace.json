@@ -6,7 +6,7 @@
     {
       "name": "llms-ink",
       "source": "./",
-      "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt, with six skills and an /ink command.",
+      "description": "Read public sites, docs, GitHub repos, PDFs and videos as llms.txt, with seven skills and an /ink command.",
       "category": "development",
       "tags": ["llms.txt", "documentation", "context", "mcp"]
     }

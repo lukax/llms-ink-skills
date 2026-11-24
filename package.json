@@ -1,8 +1,8 @@
 {
   "name": "llms-ink-skills",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": true,
-  "description": "llms.ink for omp: the ink_llms and ink_check tools, six skills and the /ink command.",
+  "description": "llms.ink for omp: the ink_llms and ink_check tools, seven skills and the /ink command.",
   "license": "MIT",
   "type": "module",
   "omp": {

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Listen to a live stream"
+  short_description: "Act when a live stream says something"
+  default_prompt: "Use $ink-listen-live to follow this live stream and tell me when it mentions what I'm looking for."

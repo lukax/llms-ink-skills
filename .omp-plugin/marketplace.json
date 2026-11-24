@@ -6,7 +6,7 @@
     {
       "name": "llms-ink",
       "source": "./",
-      "description": "The ink_llms and ink_check tools, six skills and an /ink command for reading public sites, docs, GitHub repos, PDFs and videos as llms.txt.",
+      "description": "The ink_llms and ink_check tools, seven skills and an /ink command for reading public sites, docs, GitHub repos, PDFs and videos as llms.txt.",
       "category": "development",
       "tags": ["llms.txt", "documentation", "context"]
     }
